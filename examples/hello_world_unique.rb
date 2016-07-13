@@ -18,7 +18,7 @@ class Driver
   end
 
   def file_system(user)
-    Ftpd::DiskFileSystem.new(@temp_dir)
+    Ftpd::UniqueFileNamesDiskFileSystem.new(@temp_dir)
   end
 
 end

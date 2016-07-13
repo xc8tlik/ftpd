@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'memoizer', '~> 1.0'
+gem 'uuid', '~> 2.3', '>= 2.3.8'
 
 group :development do
   gem 'cucumber', '~> 2.0'
