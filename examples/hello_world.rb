@@ -26,6 +26,9 @@ end
 Dir.mktmpdir do |temp_dir|
   driver = Driver.new(temp_dir)
   server = Ftpd::FtpServer.new(driver)
+  server.interface = '0.0.0.0'
+  server.port = 21
+  server.log = Logger.new($stdout)
   server.start
   puts "Server listening on port #{server.bound_port}"
   gets
